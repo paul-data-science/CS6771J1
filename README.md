@@ -37,7 +37,7 @@ past tasks to tackle forgetting. One approach to leverage such episodic
 memory is to use it to constrain the optimization such that the loss on
 past tasks can never increase
 
-##**Algorithm used: GEM (Gradient Episodic Memory)**
+## **Algorithm used: GEM (Gradient Episodic Memory)**
 
 The 3 components involved are
 
@@ -195,10 +195,10 @@ Algorithm to optimize - Stochastic Gradient Descent
 
 ## **FINAL RESULTS**
 
-Final Accuracy = 0.952332\
+**Final Accuracy = 0.952332\
 Backward Trasnfer = -0.025853\
 Forward Trasnfer = 0.764005\
-\-\-- 71.87696500221888 minutes \-\--
+\-\-- 71.87696500221888 minutes \-\--**
 
 ## **Important Methods in Code**
 
