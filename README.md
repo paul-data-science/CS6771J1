@@ -70,10 +70,10 @@ Transfer).
 
 Metrics Calculated:
 
-![](media/image1.png){width="5.322916666666667in"
+![](images/image1.png){width="5.322916666666667in"
 height="0.9583333333333334in"}
 
-![](media/image2.png){width="6.5in" height="0.8847222222222222in"}
+![](images/image2.png){width="6.5in" height="0.8847222222222222in"}
 
 Ri,j is the test classification accuracy of the model on task tj after
 observing the last sample from task ti .
@@ -94,7 +94,7 @@ t here is Task
 
 when observing the triplet (x, t, y), solve the following problem:
 
-![](media/image3.png){width="5.947916666666667in"
+![](images/image3.png){width="5.947916666666667in"
 height="0.8333333333333334in"}
 
 where f ~θ~ ^t−1^ is the predictor state at the end of learning of task
@@ -104,7 +104,7 @@ The constraint above is rephrased as below by calculating the angle
 between previous tasks' loss gradient vector and the proposed update
 gradient from the current task
 
-![](media/image4.png){width="6.5in" height="0.6118055555555556in"}
+![](images/image4.png){width="6.5in" height="0.6118055555555556in"}
 
 If all the inequality constraints are satisfied, then the proposed
 parameter update g is unlikely to increase the loss at previous tasks.
@@ -115,13 +115,13 @@ project the proposed gradient g to the closest gradient g˜ (in squared
 \`2 norm) satisfying all the constraints. The net equation to be solved
 is
 
-![](media/image5.png){width="4.760416666666667in"
+![](images/image5.png){width="4.760416666666667in"
 height="1.0104166666666667in"}
 
 This is solved using Quadratic Programming to obtain the WEIGHTS that
 will increase Backward transfer or not Increase Loss!!!
 
-![](media/image6.png){width="6.5in" height="2.8604166666666666in"}
+![](images/image6.png){width="6.5in" height="2.8604166666666666in"}
 
 **TRAIN function:**
 
