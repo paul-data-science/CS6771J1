@@ -1,4 +1,4 @@
-####**How to run the Notebook using Google Colab**
+## **How to run the Notebook using Google Colab**
 
 The following code needs to be run for the data set to be linked to the
 notebook
@@ -21,7 +21,7 @@ following code( already in the notebook)
 
 **f = np.load(\'/content/drive/My Drive/Colab Notebooks/mnist.npz\')**
 
-##**Why Continual Learning**
+## **Why Continual Learning**
 
 One major obstacle towards AI is the poor ability of models to solve new
 problems quicker, and without forgetting previously acquired knowledge
@@ -30,7 +30,7 @@ catastrophic forgetting and achieving nontrivial *backwards
 transfer* (BT) and *forward transfer* (FT) are major goals for continual
 learning models, and in addition, general AI.
 
-##**Memory-Based CL approaches**
+## **Memory-Based CL approaches**
 
 These approaches use episodic memory that stores a subset of data from
 past tasks to tackle forgetting. One approach to leverage such episodic
@@ -120,7 +120,7 @@ will increase Backward transfer or not Increase Loss!!!
 
 ![](images/image6.png)
 
-##**TRAIN function:**
+## **TRAIN function:**
 
 -   Initialize memory for each task t.
 
@@ -142,7 +142,7 @@ will increase Backward transfer or not Increase Loss!!!
 
 -   Update the matrix R using Evaluate function on test data.
 
-##**Evaluate function:**
+## **Evaluate function:**
 
 -   Initialize r vector to zero
 
@@ -156,7 +156,7 @@ will increase Backward transfer or not Increase Loss!!!
 
 -   Calculate BWT, FWT and plot graphs.
 
-##**DataSet**
+## **DataSet**
 
 We use MNIST handwritten digit dataset. It consists of 60,000 images for
 training and 10,000 images for testing. Each image is 28\*28 pixels. We
@@ -167,7 +167,7 @@ In this project we use 10 tasks (10 different rotation angles from 0 to
 90 degrees).Which means each of the 10 tasks has 60,000 images for
 training and 10,000 images for testing.
 
-##**Architecture**
+## **Architecture**
 
 Fully connected neural networks with six hidden layers of 250 ReLU
 units.
@@ -176,9 +176,9 @@ Mini batch size = 32
 
 Algorithm to optimize - Stochastic Gradient Descent
 
-**Here are all the arguments:
+**Here are all the arguments:**
 
-args = {\
+**args = {\
 \'model\' : \'gem\',\
 \'lr\' : 0.05,\
 \'n_memories\' : 512,\
@@ -191,16 +191,16 @@ args = {\
 \'n_hidden\' : 250,\
 \'data_file\' : \'mnist_rotations.pt\',\
 \'log_every\' : 100\
-}
+}**
 
-##**FINAL RESULTS**
+## **FINAL RESULTS**
 
 Final Accuracy = 0.952332\
 Backward Trasnfer = -0.025853\
 Forward Trasnfer = 0.764005\
 \-\-- 71.87696500221888 minutes \-\--
 
-**Important Methods in Code**
+## **Important Methods in Code**
 
 **store_grad** -- This Method stores the gradient for Past Tasks
 
@@ -211,9 +211,9 @@ Tasks gradient results in Increase in Loss for any of the Previous Tasks
 **project2cone2** -- This Method uses Quadratic Programming to solve the
 Inequality equation to come up with projected gradient value
 
-**Important CLASS in the Code**
+## **Important CLASS in the Code**
 
-**Net**
+## **Net**
 
 This class does a number of things like:
 
