@@ -1,4 +1,4 @@
-# Continual Learning with GEM and MNIST
+# Continual Learning using GEM on MNIST
 *GEM (Gradient Episodic Memory)*
 ## **How to run the Notebook using Google Colab**
 
