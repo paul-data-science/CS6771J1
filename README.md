@@ -1,3 +1,5 @@
+# Continual Learning with GEM and MNIST
+*GEM (Gradient Episodic Memory)*
 ## **How to run the Notebook using Google Colab**
 
 The following code needs to be run for the data set to be linked to the
