@@ -1,11 +1,11 @@
-**How to run the Notebook using Google Colab**
+####**How to run the Notebook using Google Colab**
 
 The following code needs to be run for the data set to be linked to the
 notebook
 
-from google.colab import drive
+**from google.colab import drive**
 
-drive.mount(\'/content/drive\')
+**drive.mount(\'/content/drive\')**
 
 It would ask for an authorization code with a link provided, click on
 the link, chose your google drive account, copy the authorization code
@@ -14,14 +14,14 @@ and paste it back to where the code was run
 Then use the dataset mnist.npz provided in the github, download it and
 upload to the google drive at the location
 
-/content/drive/My Drive/Colab Notebooks/
+**/content/drive/My Drive/Colab Notebooks/**
 
 Then you should be able to Extract the Test and Train data using the
 following code( already in the notebook)
 
-f = np.load(\'/content/drive/My Drive/Colab Notebooks/mnist.npz\')
+**f = np.load(\'/content/drive/My Drive/Colab Notebooks/mnist.npz\')**
 
-**Why Continual Learning**
+##**Why Continual Learning**
 
 One major obstacle towards AI is the poor ability of models to solve new
 problems quicker, and without forgetting previously acquired knowledge
@@ -30,26 +30,26 @@ catastrophic forgetting and achieving nontrivial *backwards
 transfer* (BT) and *forward transfer* (FT) are major goals for continual
 learning models, and in addition, general AI.
 
-**Memory-Based CL approaches**
+##**Memory-Based CL approaches**
 
 These approaches use episodic memory that stores a subset of data from
 past tasks to tackle forgetting. One approach to leverage such episodic
 memory is to use it to constrain the optimization such that the loss on
 past tasks can never increase
 
-**Algorithm used: GEM (Gradient Episodic Memory)**
+##**Algorithm used: GEM (Gradient Episodic Memory)**
 
 The 3 components involved are
 
 > *\
-> Memory*: For each task, let's make sure we don't forget them. We'll
+> **Memory:*** For each task, let's make sure we don't forget them. We'll
 > keep a portion of them in memory.
 >
-> *Episodic*: Let's replay these memories to make sure we're not
+> ***Episodic:*** Let's replay these memories to make sure we're not
 > damaging our accuracy on these tasks when we learn new ones. By
 > playing them over again, we're basically going through an episode
 >
-> *Gradient*: When we look at the episode again, let's make sure the
+> ***Gradient:*** When we look at the episode again, let's make sure the
 > gradient doesn't go the wrong way. What this means is: let's not
 > unlearn what we learned on the previous task.
 
@@ -68,7 +68,7 @@ backward transfer is also known as (catastrophic) forgetting
 The focus is to minimize Backwards Loss (aka maximize Backwards
 Transfer).
 
-Metrics Calculated:
+**Metrics Calculated:**
 
 ![](images/image1.png)
 
@@ -120,7 +120,7 @@ will increase Backward transfer or not Increase Loss!!!
 
 ![](images/image6.png)
 
-**TRAIN function:**
+##**TRAIN function:**
 
 -   Initialize memory for each task t.
 
@@ -142,7 +142,7 @@ will increase Backward transfer or not Increase Loss!!!
 
 -   Update the matrix R using Evaluate function on test data.
 
-**Evaluate function:**
+##**Evaluate function:**
 
 -   Initialize r vector to zero
 
@@ -156,7 +156,7 @@ will increase Backward transfer or not Increase Loss!!!
 
 -   Calculate BWT, FWT and plot graphs.
 
-**DataSet**
+##**DataSet**
 
 We use MNIST handwritten digit dataset. It consists of 60,000 images for
 training and 10,000 images for testing. Each image is 28\*28 pixels. We
@@ -167,7 +167,7 @@ In this project we use 10 tasks (10 different rotation angles from 0 to
 90 degrees).Which means each of the 10 tasks has 60,000 images for
 training and 10,000 images for testing.
 
-**Architecture**
+##**Architecture**
 
 Fully connected neural networks with six hidden layers of 250 ReLU
 units.
@@ -176,7 +176,7 @@ Mini batch size = 32
 
 Algorithm to optimize - Stochastic Gradient Descent
 
-Here are all the arguments :
+**Here are all the arguments:
 
 args = {\
 \'model\' : \'gem\',\
@@ -193,7 +193,7 @@ args = {\
 \'log_every\' : 100\
 }
 
-**FINAL RESULTS**
+##**FINAL RESULTS**
 
 Final Accuracy = 0.952332\
 Backward Trasnfer = -0.025853\
