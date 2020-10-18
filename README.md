@@ -1,3 +1,11 @@
+CS 6771J1, Deep Learning, Fall 2020<br/>
+New Jersey Institute of Technology<br/>
+Project 1 - Continual Learning AI<br/>
+Group 4 Participants:<br/>
+Paul Aggarwal<br/>
+Navneet Kala<br/>
+Akash Shrivastava<br/>
+
 # Continual Learning using GEM on MNIST
 *GEM (Gradient Episodic Memory)*
 ## **How to run the Notebook using Google Colab**
